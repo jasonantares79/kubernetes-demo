@@ -1,0 +1,7 @@
+Desplegar imagen MongoDB en el puerto 27017, desplegar 4 replicas
+
+	kubectl run mongo-ejercicio-1 --image=mongo --port:27017
+
+	kubectl scale --replicas=4 deployment/mongo-exercise-1
+
+	kubectl describe deployment mongo-exercise-1

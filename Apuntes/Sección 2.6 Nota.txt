@@ -1,0 +1,8 @@
+NOTA: AWS EKS esta ahora generalmente disponible
+
+	Nota: Después de la grabación de este curso, AWS EKS esta generalmente disponible desde el 5 de Junio del 2018:
+
+	https://aws.amazon.com/blogs/aws/amazon-eks-now-generally-available/
+	
+	
+	cd %userprofile%

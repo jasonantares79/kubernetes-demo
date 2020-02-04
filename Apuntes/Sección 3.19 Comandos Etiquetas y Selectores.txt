@@ -1,0 +1,11 @@
+Comandos para Etiquetas y Selectores
+
+	kubectl get nodes
+	
+	kubectl label node minikube storageType=ssd
+	
+	kubectl describe node minikube
+	
+	kubectl apply -f ./deployment.yaml
+	
+	kubectl describe deployment tomcat-deployment

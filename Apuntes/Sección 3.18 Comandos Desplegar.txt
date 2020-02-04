@@ -1,0 +1,10 @@
+Comandos para Desplegar
+
+	kubectl get deployments
+	
+	kubectl rollout status deployment tomcat-peployment
+	
+	kubectl set image deployment/tomcat-peployment tomcat=tomcat:9.0.1
+	
+	kubectl rollout history deployment tomcat-deployment
+	kubectl rollout history deployment tomcat-deployment --revision=2

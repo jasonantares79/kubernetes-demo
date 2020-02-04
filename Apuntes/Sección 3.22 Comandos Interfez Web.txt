@@ -1,0 +1,32 @@
+Comandos de Interfaz web
+
+	kubectl proxy
+	kubectl create -f https://raw.githubusercontent.com/kubernetes/dashboard/master/src/deploy/recommended/kubernetes-dashboard.yaml
+
+
+
+Solución de Problemas
+
+	Al tratar de acceder a la UI de la web a través del servidor proxy, este solo navega para mostrar todos los caminos del api y no del UI.
+
+	Solución:
+
+	Este es un problema conocido del actual minikube, revisa aqui:
+	
+		https://github.com/kubernetes/minikube/issues/3041
+
+	Para solucionarlo, todavía eres capaz de acceder al dashboard de minikube al ejecutar:
+
+		minikube dashboard
+
+	O usando
+
+		http://localhost:8001/api/v1/namespaces/kube-system/services/kubernetes-dashboard/proxy
+
+
+
+	Q&A Relacionadas:
+
+		https://www.udemy.com/kubernetes-from-a-devops-kubernetes-guru/learn/v4/questions/4393590
+
+		https://www.udemy.com/kubernetes-from-a-devops-kubernetes-guru/learn/v4/questions/4812944

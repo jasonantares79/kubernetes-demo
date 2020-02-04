@@ -1,0 +1,15 @@
+Comandos DNS y Descubrimiento de Servicio
+
+	kubectl create -f mysql-deployment.yaml
+
+	kubectl get pods
+
+	kubectl get services
+
+	kubectl create -f wordpress-deployment.yaml
+
+	kubectl get pods
+
+	kubectl get services
+
+	minikube service wordpress --url

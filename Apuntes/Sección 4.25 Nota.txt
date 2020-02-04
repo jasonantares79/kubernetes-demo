@@ -1,0 +1,17 @@
+Texto de apoyo: DNS y Descubrimiento de Servicio
+
+Lectura extendida acerca de la sintaxis de despliegue de archivos y comandos kubectl
+
+
+	Si eres nuevo en archivos YAML, lee Introduction to YAML: Creating a Kubernetes deployment
+	(https://www.mirantis.com/blog/introduction-to-yaml-creating-a-kubernetes-deployment/)
+
+	'---' es usado para separar documentos. Esto nos permite poner múltiples archivos en uno solo - por ejemplo: servicios, desplieges, etc. Podríamos haber hecho archivos separados. Uno para el servicio y otro para el despliegue, pero el '---' nos permite poner todos ellos en uno solo archivo. 
+
+	¿Que es apiVersion y cual apiVersion Kubernetes debería usar?
+	https://matthewpalmer.net/kubernetes-app-developer/articles/kubernetes-apiversion-definition-guide.html
+
+	Diferencia entre kubectl create y kubectl apply : 
+		kubectl create puede ser usado únicamente para crear nuevos despliegues. 
+		kubectl apply puede ser usado para crear y actualizar despliegues. 
+		Otras características aparte de las descritas son muy parecidas.
