@@ -1,0 +1,12 @@
+Nota: Secretos
+
+En este clase, vamos a aprender como usar una declaración de respaldo secreto.
+Sin embargo, en algunas versiones de herramientas de k8s cuando cambiamos de una declaración basada en variables (nuestra clase anterior de Volúmenes) a una declaración de respaldo secreto (esta clase) los despliegues deben ser borrados.
+Se sugiere fuertemente a ejecutar los siguientes comandos para borrar todos los recursos creados previamente, reiniciar minikube, antes de ver esta clase.
+
+	Comandos
+
+		kubectl delete -f ./mysql-deployment.yaml
+		kubectl delete -f ./wordpress-deployment.yaml
+		minikube stop
+		minikube start
