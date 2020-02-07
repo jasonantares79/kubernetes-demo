@@ -6,3 +6,5 @@ NOTA: AWS EKS esta ahora generalmente disponible
 	
 	
 	cd %userprofile%
+	
+	https://kubernetes.io/es/docs/tasks/tools/install-kubectl/
