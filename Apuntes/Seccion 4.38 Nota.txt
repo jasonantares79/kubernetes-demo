@@ -1,0 +1,33 @@
+Texto de apoyo: Auditing
+
+
+Solución de problemas:
+
+Si tienes problemas al ejecutar el archivo de comandos en 'Starting cluster components'
+
+minikube start  --extra-config=apiserver.Authorization.Mode=RBAC --extra-config=apiserver.Audit.LogOptions.Path=/var/log/audit.log   --extra-config=apiserver.Audit.PolicyFile=/etc/kubernetes/addons/audit-policy.yaml
+results in the command hanging on 'Starting cluster components...'
+Starting local Kubernetes v1.10.0 cluster...
+Starting VM...
+Getting VM IP address...
+Moving files into cluster...
+Setting up certs...
+Connecting to cluster...
+Setting up kubeconfig...
+Starting cluster components...
+
+y el registro de errores en minikube dice
+
+failed to run Kubelet: unable to load bootstrap kubeconfig: stat /etc/kubernetes/bootstrap-kubelet.conf: no such file or director
+
+Solución:
+
+Este es un problema con minikube 0.28, aquí hay un ticket abierto para este problema.
+
+Para darle la vuelta al problema, puedes desinstalar la versión actual de minikube y reinstalar  minikube 0.25.2
+
+Q&A Relacionados:
+
+https://www.udemy.com/kubernetes-from-a-devops-kubernetes-guru/learn/v4/questions/4555676
+
+https://www.udemy.com/kubernetes-from-a-devops-kubernetes-guru/learn/v4/questions/4471680

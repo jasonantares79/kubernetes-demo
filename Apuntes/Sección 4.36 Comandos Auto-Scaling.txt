@@ -1,0 +1,49 @@
+Comandos Auto-Scaling
+
+
+(En la primera terminal)
+
+# since the latest minikube doesn't enable metrics-server by defaultminikube addons enable metrics-server
+	kubectl apply -f ./wordpress-deployment.yaml 
+
+	kubectl autoscale deployment wordpress --cpu-percent=50 --min=1 --max=5
+
+(En otra terminal)
+
+	kubectl run -i --tty load-generator --image=busybox --generator=run-pod/v1 /bin/sh 
+
+	while true; do wget -q -O- http://wordpress.default.svc.cluster.local; done
+
+Nota: En la última versión de kubectl, usando kubectl run con algunos generadores excepto contenedores es obsoleta. Como consecuencia, debemos especificar generador run-pod/v1 explicitamente como se muestra debajo. Para mas información, dale un vistazo a https://kubernetes.io/docs/reference/kubectl/conventions/#generators
+
+(En la primera terminal)
+
+	kubectl get hpa
+
+
+
+Solución de Problemas
+
+
+En la otra terminal donde el generador de carga se esta ejecutando, si muestra los siguientes errores
+
+	/ # while true ; do wget -q -O- http://wordpress.default.svc.cluster.local ; done
+	wget: can't connect to remote host (10.XX.XXX.XXX): Network is unreachable
+	wget: can't connect to remote host (10.XX.XXX.XXX): Network is unreachable
+	wget: can't connect to remote host (10.XX.XXX.XXX): Connection timed out
+	wget: can't connect to remote host (10.XX.XXX.XXX): Network is unreachable
+	wget: can't connect to remote host (10.XX.XXX.XXX): Connection timed out
+
+Solución:
+
+reemplaza http://wordpress.default.svc.cluster.local con el resultado de minikube service wordpress --url
+
+Por ejemplo:
+
+while true ; do wget -q -O- http://192.168.99.100:32668 ; done
+
+Q&A Relacionados:
+
+https://www.udemy.com/kubernetes-from-a-devops-kubernetes-guru/learn/v4/questions/4400548
+
+https://www.udemy.com/kubernetes-from-a-devops-kubernetes-guru/learn/v4/questions/4838588

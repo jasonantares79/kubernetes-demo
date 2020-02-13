@@ -1,0 +1,8 @@
+Comandos para Monitoreo de uso y recursos
+
+
+	minikube addons enable heapster (Heapster esta deprecated instalar prometeus o metrics-server)
+
+	kubectl get pods --namespace=kube-system
+
+	minikube addons open heapster

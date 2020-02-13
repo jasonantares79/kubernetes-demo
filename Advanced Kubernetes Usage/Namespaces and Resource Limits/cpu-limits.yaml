@@ -4,4 +4,4 @@ metadata:
   name: compute-resources
 spec:
   hard:
-    limits.cpu: "400m"
+    limits.cpu: "600m"

@@ -1,0 +1,11 @@
+Clase extra: Kubernetes Networking
+
+No hemos cubierto la Networking de Kubernetes  en detalle en este curso. Si estas interesado en aprender mas como la Networking de Kubernetes funciona, dale un vistazo a los siguientes videos.
+
+
+¿Como funciona la Networking de Kubernetes? : Parte 1
+https://www.level-up.one/kubernetes-networking-pods-levelup/
+¿Como funciona la Networking de Kubernetes? : Parte 2
+https://www.level-up.one/kubernetes-networking-series-two/
+¿Como funciona la Networking de Kubernetes? : Parte 3
+https://www.level-up.one/kubernetes-networking-3-level-up/
